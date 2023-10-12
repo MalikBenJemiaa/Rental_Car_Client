@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@500&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  
+}
+
+.font-kanit {
+  font-family: 'Kanit', sans-serif;
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1919; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #facc15;
+  opacity: 1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff; 
+}
+
+
+.searchInputWrapper {
+  position: relative;
+}
+
+.searchInput {
+  margin-right: 10px;
+  width: 12rem;
+  height: 2rem;
+  padding: 0 1rem; 
+  font-size: 12px;
+  border-radius: 25px;
+  border: 2px solid #56957e;
+  transition: transform 0.1s ease-in-out;
+  background-color: transparent;
+}
+
+::placeholder {
+  color: #a1a1a1;
+}
+
+:focus::placeholder {
+  text-indent: -999px
+}
+
+.searchInput:focus {
+  outline: none;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.searchInputIcon {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.5rem;
+  color: #a1a1a1;
+  transition: all 0.1s ease-in-out;
+}
+
+.searchInputWrapper > .searchInputIcon {
+  right: 0.2rem;
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.myMap {
+  filter: grayscale(1) contrast(1) opacity(0.9);
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #facc15;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #e5b508;
+}
+
+
+
+/** Banner Component CSS Styling **/
+
+/* Banner.css */
+.banner-container {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.banner-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-text {
+  padding: 2rem 1rem;
+  flex: 1;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.banner-description {
+  font-size: 1.25rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.banner-image {
+  flex: 1;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+}
+
+/* __________________________________________________________________________ */
+#StyleSignIn{
+  color: #56957e; 
+
+}
+#StyleSignIn:hover{
+  font-size: large;
+  color: '#56957e'!important;
+  transition: transform 0.1s ease-in-out;
+
+}
+
+#links:hover{
+border-color:#56957e ;
+}
+
+#signInButton{
+  background-color:#56957e ;
+}
+#NavCOntainer{
+  width: 100%;
+  
+  
+}
+#Username{
+  color: #1a1919;
+}
+#facebookIcon{
+  width: 20px;
+  height: 20px;
+  
+}
+.LogOut{
+  color: black;
+  font-size: 15px;
+}
+#menuAccount{
+  color:#56957e ;
+}
+#containerNavBar{
+  width: 100%;
+  border-bottom: #56957e solid 3px;
+}
+#buttonAnimation{
+  color:#56957e;
+  background-color: #56957e;
+}
+#colorProjet{
+  color: #56957e;
+}
+#HeroButton{
+  background-color: #56957e;
+}
+
+#LogoBmw{
+  width: 50px;
+  height: 50px;
+}
