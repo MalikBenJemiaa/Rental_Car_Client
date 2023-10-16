@@ -180,7 +180,7 @@ const Hero = () => {
                 stroke="#77a6bb"
                 strokeWidth="0.00024000000000000003"
 >
-  
+
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
@@ -371,7 +371,8 @@ const Hero = () => {
         </div>
       </div>
     </div>
-{/* ____________________Replace Ends here __________________________ */}
+
+{/* ____________________Replacing Ends here __________________________ */}
 
         </div>
       </header>
