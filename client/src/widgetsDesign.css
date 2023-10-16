@@ -1,0 +1,198 @@
+.myhero{
+    height: 600px;
+    width: 500px;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+.myhero .hero2{
+    height: 100%;
+    width: 49%;
+    /* border: 2px solid rgb(190, 60, 60); */
+    display: flex;
+    
+    justify-content: center;
+flex-direction: column;
+    
+}
+.myhero .hero2 .box1{
+    height: 39%;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.myhero .hero2 .box2{
+    height: 19%;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    
+}
+.TextP{
+    margin-top: 10px;
+    width: 90%;
+    height: 30px;
+    /* border: 2px solid rgb(0, 0, 0); */
+    display: flex;
+    justify-content: space-between
+}
+.TextB{
+    width: 90%;
+    height: 50px;
+    /* border: 2px solid rgb(0, 0, 0); */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.TextB .Contact{
+    font-size: 15px;
+}
+
+.TextP div{
+    /* border: 2px solid rgb(0, 0, 0); */
+    font-size: 15px;
+    font-weight: bold;
+    /* padding-top: 10px; */
+    /* text-align: center; */
+    
+}
+.TextP .text{
+    
+    padding-top:6px;
+    font-size: 15px;
+}
+.TextP div svg{
+    
+    /* border: 2px solid rgb(0, 0, 0); */
+    margin-right: -10px;
+    margin-left: -10px;
+    width: 30px;
+    height:  30px;
+    font-size: 25px;
+}
+.TextB div{
+    font-weight: bold;
+    font-size: 20px;
+}
+.TextB button{
+    background-color: transparent;
+    border: 3px solid #77a6bb;
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+}
+.TextB button svg{
+    /* border: 2px black solid; */
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    
+} 
+.TextB button:hover{
+    background-color: #000000;
+    
+}
+.box1 .AA{
+    background-color: transparent;
+    width: 95%;
+    height: 40%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center
+}
+.box1 .thedate {
+    justify-content: space-between;
+    border-bottom:1px solid gray ;
+}
+.box1 .thedate .day{
+    font-size: 50px;
+}
+.box1 .thedate .logo{
+    height: 100%;
+    /* border: 2px solid black; */
+    width: 30px;
+    display: flex;
+}
+.box1 .Options{
+    height: 25%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.box1 .Options button{
+    background-color: transparent;
+    width: 100%;
+    height: 48%;
+    justify-content: space-evenly;
+    border: 0px ;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between
+}
+.box1 .Options button div{
+    font-size: 15px;
+}
+.box1 .Options .notB{
+    border: 0px;
+}
+.box1 .Options button .lola{
+    width: 10px;
+    height: 10px;
+    /* border: #000000 1px solid; */
+}
+
+.box1 .thedate .logo svg{
+
+}
+.box1 .thedate div{
+    
+}
+.box2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;    
+}
+
+
+.box2 .the30{
+    font-size: 25px;
+    font-weight: bold;
+width: 90%;
+height: 40%;
+/* border: #000000 2px solid; */
+
+}
+.box2 .the20{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    width: 90%;
+    /* border: #000000 2px solid; */
+    height: 30%;
+    
+}
+.box2 .ww{
+    height: 24%;
+    /* border: 1px solid black; */
+    width: 90%;
+    font-weight: bold;
+    
+}
+.box2 .thetex{
+    font-size: 23px;
+    border-bottom:1px solid gray ;
+}
+.box2 .des {
+    font-weight: 100;
+}

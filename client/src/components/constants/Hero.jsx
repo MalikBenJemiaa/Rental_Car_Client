@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import "../../widgetsDesign.css"
 
 const Hero = () => {
   const docForm = 'https://docs.google.com/forms/d/e/1FAIpQLSdJvdNLhbUrjyljIqntYgRKWp1oMXFv6EmbPEAvTKwZiqXj4w/viewform?vc=0&c=0&w=1&flr=0';
@@ -86,7 +86,9 @@ const Hero = () => {
             </div>
           </div>
 
-          <div
+{/* Car Images Container */}
+
+       {/*    <div
             className="flex items-center justify-center w-96 h-96 md:w-1/2"
             data-aos="fade-left"
             data-aos-offset="300"
@@ -97,7 +99,279 @@ const Hero = () => {
               src={images[currentImageIndex]}
               alt="TunisianAutoTrek Vehicle" data-aos="fade-right"
             />
+          </div> */}
+
+{/* ________________________Replace By_______________________________ */}
+<div class="myhero">
+      <div class="hero2">
+        <div class="box1">
+          <div class="TextP">
+            <div class="text">Our Garages</div>
+            <div class="points">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                    fill="#77a6bb"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                    fill="#77a6bb"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                    fill="#77a6bb"
+                  ></path>
+                </g>
+              </svg>
+            </div>
           </div>
+          <div class="TextB">
+            <div>
+              BEST <br />
+              CARS TO RENT
+            </div>
+            <button>
+            <svg
+                fill="#77a6bb"
+                version="1.1"
+                viewBox="0 0 24.00 24.00"
+                xmlSpace="preserve"
+                width="256px"
+                height="256px"
+                stroke="#77a6bb"
+                strokeWidth="0.00024000000000000003"
+>
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <style type="text/css">
+                  {`.st0 {
+                    fill: none;
+                           }`}
+                  </style>
+                  <path d="M9,18l7-6L9,6V18z"></path>
+                  <rect class="st0" width="24" height="24"></rect>
+                  <rect class="st0" width="24" height="24"></rect>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="box1">
+          <div class="thedate AA">
+            <div class="day">19 July</div>
+            <div class="logo">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M3 9H21M17 13.0014L7 13M10.3333 17.0005L7 17M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="Options AA">
+            <button>
+              <div>Cheack Our Dispo Cars</div>
+              <div class="lola">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M4 12H20M20 12L16 8M20 12L16 16"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+            <button class="notB">
+              <div>Proposition</div>
+              <div class="lola">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M4 12H20M20 12L16 8M20 12L16 16"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hero2">
+        <div class="box1">
+          <div class="TextP">
+            <div class="text">Our Garages</div>
+            <div class="points">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                    fill="#77a6bb"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                    fill="#77a6bb"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 9.5C13.3807 9.5 14.5 10.6193 14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5Z"
+                    fill="#77a6bb"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="TextB">
+            <div class="Contact">Contact Our Service</div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="the30 m1">Luxury</div>
+          <div class="the20 mm">
+            <div>CARS</div>
+            <div>discover it</div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="the30 m1">Popular</div>
+          <div class="the20 mm">
+            <div>CARS</div>
+            <div>discover it</div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="thetex ww">Fidelity Points</div>
+          <div class="ladate ww">19 July 2023</div>
+          <div class="codeBar ww"></div>
+          <div class="des ww">Don't Miss The Opportunity</div>
+        </div>
+      </div>
+    </div>
+{/* ____________________Replace Ends here __________________________ */}
+
         </div>
       </header>
     </>
