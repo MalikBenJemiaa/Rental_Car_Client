@@ -201,6 +201,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
+        
         <div class="box1">
           <div class="thedate AA">
             <div class="day">19 July</div>
@@ -284,6 +285,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
       <div class="hero2">
         <div class="box1">
           <div class="TextP">
@@ -345,7 +347,7 @@ const Hero = () => {
               </svg>
             </div>
           </div>
-          
+
           <div class="TextB">
             <div class="Contact">Contact Our Service</div>
           </div>
