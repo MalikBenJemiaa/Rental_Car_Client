@@ -370,6 +370,8 @@ const Hero = () => {
           <div class="des ww">Don't Miss The Opportunity</div>
         </div>
       </div>
+
+      
     </div>
 
 {/* ____________________Replacing Ends here __________________________ */}
