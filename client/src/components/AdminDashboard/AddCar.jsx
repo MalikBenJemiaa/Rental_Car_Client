@@ -15,8 +15,11 @@ const AddCar = () => {
     stock: '',
     price_per_day: '',
     color: '',
-    num_assurance: '',
-    end_assurance: '',
+    num_assurance: {
+      num_assurace:'',
+      end_assurance: '',
+    },
+   
     tech_fiche:{
       marque:'',
       puissence:'',
@@ -64,7 +67,7 @@ const AddCar = () => {
     }
   }; */
 
-  const handleImageChange = (event, index) => {
+  /* const handleImageChange = (event, index) => {
     const { files } = event.target;
     if (files.length > 0) {
       const file = files[0];
@@ -82,15 +85,34 @@ const AddCar = () => {
       reader.readAsDataURL(file);
       console.log("the data to send in request is",formData)
     }
-  };
+  }; */
+
+  const handleImageChange = async (event, index) => {
+  const selectedFile = event.target.files[0];
+ 
+  const arrayBuffer = await selectedFile.arrayBuffer();
+  const byteArray =await  new Uint8Array(arrayBuffer);
+console.log("bytearray",byteArray)
+  // Now 'byteArray' contains the data as a byte array
+  setFormData((prevData) => {
+    const updatedphotos = [...prevData.photos];
+    updatedphotos[index] = byteArray;
+    console.log("result",{ ...prevData, photos: updatedphotos })
+    return { ...prevData, photos: updatedphotos };
+  });
+
+      console.log("the data to send in request is",formData)
+    }
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       console.log(formData,"is the object to send")
-      await axios.post('http://localhost:8090/cars/registerCar', formData);
-      window.location.reload();
-    } catch (error) {
+      const response =await axios.post('http://localhost:8090/QueryCars/saveNewCar', formData);
+      /* window.location.reload(); */
+      console.log("response: ",response)    } 
+      catch (error) {
       console.error(error);
     }
   };
@@ -228,9 +250,12 @@ const AddCar = () => {
 			<div className="relative z-0 mb-6 w-full group">
 				<input 
                  type="text"
-                 value={formData.num_assurance}
+                 value={formData.num_assurance.num_assurace}
                  onChange={(e) =>
-                   setFormData({ ...formData, num_assurance: e.target.value })
+                  setFormData({ ...formData, num_assurance: {
+                    ...formData.num_assurance,
+                    num_assurace: e.target.value,
+                  }, })
                  }
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Insurance Number</label>
@@ -238,9 +263,12 @@ const AddCar = () => {
 			<div className="relative z-0 mb-6 w-full group">
 				<input 
                  type="date"
-                 value={formData.end_assurance}
+                 value={formData.num_assurance.end_assurance}
                  onChange={(e) =>
-                   setFormData({ ...formData, end_assurance: e.target.value })
+                  setFormData({ ...formData, num_assurance: {
+                    ...formData.num_assurance,
+                    end_assurance: e.target.value,
+                  }, })
                  }
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-Green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">End date of insurance</label>
