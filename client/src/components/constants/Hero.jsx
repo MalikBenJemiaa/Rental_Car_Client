@@ -345,10 +345,12 @@ const Hero = () => {
               </svg>
             </div>
           </div>
+          
           <div class="TextB">
             <div class="Contact">Contact Our Service</div>
           </div>
         </div>
+
         <div class="box2">
           <div class="the30 m1">Luxury</div>
           <div class="the20 mm">
@@ -356,6 +358,7 @@ const Hero = () => {
             <div>discover it</div>
           </div>
         </div>
+
         <div class="box2">
           <div class="the30 m1">Popular</div>
           <div class="the20 mm">
@@ -363,6 +366,7 @@ const Hero = () => {
             <div>discover it</div>
           </div>
         </div>
+
         <div class="box2">
           <div class="thetex ww">Fidelity Points</div>
           <div class="ladate ww">19 July 2023</div>
@@ -371,7 +375,7 @@ const Hero = () => {
         </div>
       </div>
 
-      
+
     </div>
 
 {/* ____________________Replacing Ends here __________________________ */}
