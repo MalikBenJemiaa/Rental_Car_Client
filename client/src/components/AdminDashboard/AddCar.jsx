@@ -12,7 +12,7 @@ const AddCar = () => {
   const [formData, setFormData] = useState({
     mat: '',
     model: '',
-    stock: '',
+    stock:'',
     price_per_day: '',
     color: '',
     num_assurance: {
@@ -27,7 +27,11 @@ const AddCar = () => {
       released_date:'',
       description:'',
     },
-    photos:[]
+    photo1:'',
+    photo2:'',
+    photo3:'',
+    photo4:''
+
   });
 
   
@@ -81,7 +85,19 @@ const AddCar = () => {
           console.log("result",{ ...prevData, photos: updatedphotos })
           return { ...prevData, photos: updatedphotos };
         }); */
-        setFormData({ ...formData, photos: base64String })
+        if(index==0){
+          setFormData({ ...formData, photo1: base64String })
+        }
+        if(index==1){
+          setFormData({ ...formData, photo2: base64String })
+        }
+        if(index==2){
+          setFormData({ ...formData, photo3: base64String })
+        }
+        if(index==3){
+          setFormData({ ...formData, photo4: base64String })
+        }
+
       };
       reader.readAsDataURL(file);
       console.log("the data to send in request is",formData)
@@ -187,6 +203,7 @@ console.log("bytearray",byteArray)
 </label>
 		</div>
     </div>
+    
       <div className="grid xl:grid-cols-2 xl:gap-6">
 			<div className="relative z-0 mb-6 w-full group">
 				<input id="image2"
@@ -196,38 +213,36 @@ console.log("bytearray",byteArray)
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 2
 </label>
-			</div>
+</div>
 
-   {/*          <div className="relative z-0 mb-6 w-full group">
-				<input 
-                  type="file"
-                  value={formData.carIMG2}
-                  onChange={
-                    handleImageUpload
-                  }
+
+
+<div className="grid  xl:gap-6">
+			<div className="relative z-0 mb-6 w-full group">
+				<input id="image1"
+                 type="file"
+                 onChange={(e) => handleImageChange(e, 2)}
+             
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
-				<label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 2</label>
-			</div>
-            <div className="relative z-0 mb-6 w-full group">
-				<input 
-                  type="file"
-                  value={formData.carIMG3}
-                  onChange={
-                    handleImageUpload
-                  }
+				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 3
+</label>
+		</div>
+    </div>
+
+    <div className="grid xl:grid-cols-1 xl:gap-6">
+			<div className="relative z-0 mb-6* w-full group">
+				<input id="image1"
+                 type="file"
+                 onChange={(e) => handleImageChange(e, 3)}
+             
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
-				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 3</label>
-			</div>
-            <div className="relative z-0 mb-6 w-full group">
-				<input 
-                type="file"
-                value={formData.carIMG4}
-                onChange={
-                  handleImageUpload
-                }
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
-				<label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 4</label>
-			</div> */}
+				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 4
+</label>
+		</div>
+    </div>
+
+
+
 			<div className="relative z-0 mb-6 w-full group">
 				<input 
                  type="text"
@@ -248,6 +263,9 @@ console.log("bytearray",byteArray)
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
 			</div>
 		</div>
+    
+
+    
 		<div className="grid xl:grid-cols-2 xl:gap-6">
 			<div className="relative z-0 mb-6 w-full group">
 				<input 
