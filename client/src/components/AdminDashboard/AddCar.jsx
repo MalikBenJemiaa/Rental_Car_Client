@@ -67,42 +67,44 @@ const AddCar = () => {
     }
   }; */
 
-  /* const handleImageChange = (event, index) => {
+  const handleImageChange = (event, index) => {
     const { files } = event.target;
     if (files.length > 0) {
       const file = files[0];
       const reader = new FileReader();
       reader.onload = function (event) {
         const base64String = event.target.result;
-        console.log("base64String",base64String)
-        setFormData((prevData) => {
+
+        /* setFormData((prevData) => {
           const updatedphotos = [...prevData.photos];
           updatedphotos[index] = base64String;
           console.log("result",{ ...prevData, photos: updatedphotos })
           return { ...prevData, photos: updatedphotos };
-        });
+        }); */
+        setFormData({ ...formData, photos: base64String })
       };
       reader.readAsDataURL(file);
       console.log("the data to send in request is",formData)
     }
-  }; */
+  };
 
-  const handleImageChange = async (event, index) => {
+  /* const handleImageChange = async (event, index) => {
   const selectedFile = event.target.files[0];
  
   const arrayBuffer = await selectedFile.arrayBuffer();
   const byteArray =await  new Uint8Array(arrayBuffer);
 console.log("bytearray",byteArray)
   // Now 'byteArray' contains the data as a byte array
-  setFormData((prevData) => {
+   setFormData((prevData) => {
     const updatedphotos = [...prevData.photos];
     updatedphotos[index] = byteArray;
     console.log("result",{ ...prevData, photos: updatedphotos })
     return { ...prevData, photos: updatedphotos };
   });
+   setFormData({ ...formData, photos: byteArray }) 
 
       console.log("the data to send in request is",formData)
-    }
+    } */
 
 
   const handleSubmit = async (e) => {
