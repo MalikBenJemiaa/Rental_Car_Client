@@ -47,7 +47,7 @@ const Navbar = () => {
 
             <a href="/" id="links" className="border-b-2 border-transparent hover:border-black-800 hover:text-black-800 dark:hover:text-black  ease-in duration-300 mx-1.5 sm:mx-6">About</a>
 
-            <a href="/" id="links" className="border-b-2 border-transparent hover:border-black-800 hover:text-black-800 dark:hover:text-black  ease-in duration-300 mx-1.5 sm:mx-6">Car Models</a>
+            <Link to="/CarModels" id="links" className="border-b-2 border-transparent hover:border-black-800 hover:text-black-800 dark:hover:text-black  ease-in duration-300 mx-1.5 sm:mx-6">Car Models</Link>
 
             <a href="/" id="links" className="border-b-2 border-transparent hover:border-black-800 hover:text-black-800 dark:hover:text-black  ease-in duration-300 mx-1.5 sm:mx-6">Categories</a>
 

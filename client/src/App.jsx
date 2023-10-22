@@ -13,7 +13,8 @@ import Signup from "./pages/Signup";
 import { CarContextProvider } from './pages/CarContext.jsx';
 import AdminDashb from "./components/AdminDashboard/AdminDashb";
 import AddCar from "./components/AdminDashboard/AddCar";
-
+import CarModels from './components/CarModels'
+import './carCardsStyling.css'
 AOS.init();
 
 const App = () => {
@@ -66,6 +67,7 @@ const App = () => {
           <Route path="/signin" element={<Signin />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/CarModels" element ={<CarModels/>}></Route>
           <Route path="/admindashboard" element={<AdminDashb />}></Route>
           <Route path="/addcar" element={<AddCar />}></Route>
           <Route

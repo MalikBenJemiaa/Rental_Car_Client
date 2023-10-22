@@ -1,0 +1,207 @@
+.theFilter{
+    width: 80%;
+   
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.theFilter .theTitle .Tit{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.theFilter .theTitle .DesTit{
+    font-family: sans-serif;
+    font-size: 15px;
+    color: rgb(94, 94, 94);
+    
+}
+.theFilter .theChamp select{
+    border: 1px solid gray;
+    color: rgb(94, 94, 94);
+    border-radius: 5px;
+    padding: 5px 5px ;
+}
+.theFilter .theChamp select:hover{
+    border: 2px solid  rgb(63, 141, 206);
+
+}
+.theFilter .theChamp select:focus{
+    border: 2px solid  rgb(63, 141, 206);
+
+}
+.theFilter .theChamp select option{
+    font-size: 10px;
+}
+
+/* #theLL{
+    font-size: large;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(99, 99, 193);
+    border-radius: 50%;
+
+} */
+@media screen and (max-width :700px){
+    .theFilter .theChamp select{
+        margin-top: 10px;
+    }
+}
+/* end of filltre styling */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.leHole{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    justify-content: center;
+    /* border: 1px solid black; */
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+    /* justify-content: flex-start */
+}
+.carte{
+    /* border: 1px solid black; */
+    width: 200px;
+    height: 250px;
+    margin-top: 8px;
+    margin-right: 10px;
+    /* border: 1px solid black; */
+    display: flex;
+  
+    box-shadow: 1px 1px 20px 0.5px rgb(201, 201, 201);
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-evenly;
+}
+.carte:hover{
+    box-shadow: 10px 5px 20px 5px rgb(201, 201, 201);
+
+}
+.carte .AA{
+    width: 85%;
+    
+}
+.thespace{
+    height: 10px;
+}
+.carte .thePic{
+    height: 50%;
+    /* border: 1px solid black; */
+    /* background-image: url("./BMW.jpeg"); */
+    /* background-position: center center;  */
+    /* background-attachment: fixed; */
+    /* background-repeat:no-repeat ; */
+    /* background-size: cover;  */
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+.carte .thePic img{
+    object-fit: cover;
+    object-position: center center;
+    position: absolute; /* Position absolute for centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); 
+}
+.carte .theIndex{
+    height: 10%;
+    font-family: sans-serif;
+    
+    font-weight: bold;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    
+}
+.carte .thePrice{
+    height: 10%;
+    font-family: sans-serif;
+    
+}
+.carte .thePrice .lacad{
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    margin-top: -5px;
+    /* align-items: center; */
+    font-family: sans-serif;
+    font-size: 10px;
+}
+.carte .thePrice .lacad .NN{
+
+    font-family: sans-serif;
+}
+.carte .thePrice .lacad .dt{
+    font-weight: bold;
+    margin-top: -10px;
+    font-family: sans-serif;
+}
+
+.carte .thedes{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+.carte .thedes .LAM{
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.carte .thedes .LAM .thesvg{
+    width: 30%;
+    height: 90%;
+    /* border: 1px solid black; */
+    
+}
+.carte .thedes .LAM .thesvg svg{
+    height: 100%;
+    width: 100%;
+}
+.carte .thedes .LAM .theW{
+    font-size: 8px;
+    
+}
+.carte button{
+    height: 15%;
+    
+    width: 89%;
+    background-color: rgb(63, 141, 206); 
+    color: aliceblue;
+    font-weight: bold;  
+    border: 0px;
+    border-radius: 5px;
+}
+.carte button:hover{
+    background-color: rgb(58, 80, 83); 
+
+}
+.carte button:focus{
+    background-color: rgb(44, 61, 63); 
+
+}
+@media  screen and  (max-width: 840px) {
+.leHole{
+    justify-content: center;
+
+    width: 100%;
+}
+}
+/* end of the cars map */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.thePagination{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+}
+
