@@ -26,6 +26,8 @@ const AddCar = () => {
       option:'',
       released_date:'',
       description:'',
+      boite:'',
+      energie:'',
     },
     photo1:'',
     photo2:'',
@@ -238,6 +240,9 @@ console.log("bytearray",byteArray)
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 4
 </label>
+
+ 
+
 		</div>
     </div>
 
@@ -253,6 +258,31 @@ console.log("bytearray",byteArray)
                  }
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
 
+<input name='Energie'
+                 type="text"
+                 value={formData.tech_fiche.energie}
+                 placeholder="Energie"
+                 onChange={(e) =>
+                  setFormData({ ...formData,tech_fiche: {
+                    ...formData.tech_fiche,
+                    energie: e.target.value,
+                  }, })
+                 }
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
+
+     
+<input           name='Boite'
+                 type="text"
+                 value={formData.tech_fiche.boite}
+                 placeholder="Boite vitesse"
+                 onChange={(e) =>
+                  setFormData({ ...formData,tech_fiche: {
+                    ...formData.tech_fiche,
+                    boite: e.target.value,
+                  }, })
+                }
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
+               
         <input 
                  type="text"
                  value={formData.color}
@@ -262,6 +292,7 @@ console.log("bytearray",byteArray)
                  }
                 className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
 			</div>
+      
 		</div>
     
 
@@ -335,6 +366,7 @@ console.log("bytearray",byteArray)
 			<label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Horse Power /Puissance</label>
 		</div>
 
+     
     <div className="relative z-0 mb-6 w-full group">
 			<input  type="Date"
              value={formData.tech_fiche.released_date}

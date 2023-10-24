@@ -9,9 +9,9 @@ const OneCar =(props)=>{
  {/* <!-- the cart start from here --> */}
       <div className="carte">
         <div className="thePic AA">
-          {console.log(props.data.photo2  )}
+          {console.log(props.data.photo1  )}
         <img
-            src={props.data.photo2}
+            src={props.data.photo1}
             alt="width:100% ; height:100%;object-fit: cover;"
           />
         </div>
