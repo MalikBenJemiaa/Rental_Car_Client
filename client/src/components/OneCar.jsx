@@ -1,17 +1,36 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { useState } from "react";
 import CarImage from "../assets/images/BMW.jpeg"
-// {"id":1,"marque":"bmw","puissence":12,"option":"full option","released_date":"2009-02-13T23:31:30.000+00:00","description":"a great car"},"photo2":null,"photo1":null,"photo3":null,"photo4":null}
+
 
 const OneCar =(props)=>{
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [images,setImages]=useState([props.data.photo1,props.data.photo2,props.data.photo3,props.data.photo4]);
+  const changeImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    console.log(currentImageIndex)
+  };
+
+  useEffect(()=>{
+    
+    
+    const intervalId = setInterval(changeImage, 5000);
+    return () => clearInterval(intervalId);
+  },[])
    return (
     <>
  {/*    <!-- the cart start from here --> */}
  {/* <!-- the cart start from here --> */}
       <div className="carte">
-        <div className="thePic AA">
-          {console.log(props.data.photo1  )}
+        <div className="thePic AA"  
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+
+         {/*  {console.log(props.data.photo1  )} */}
         <img
-            src={props.data.photo1}
+            src={images[currentImageIndex]}
             alt="width:100% ; height:100%;object-fit: cover;"
           />
         </div>
@@ -124,7 +143,7 @@ const OneCar =(props)=>{
                 </g>
               </svg>
             </div>
-            {console.log(props.data)}
+          
             <div className="theW">{props.data.tech_fiche.puissence} HP</div>
           </div>
           <div className="LAM">
