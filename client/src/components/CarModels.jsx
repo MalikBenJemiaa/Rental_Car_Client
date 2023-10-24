@@ -3,14 +3,16 @@ import axios from 'axios';
 // import DisplayModelsDetails from './DisplayModelsDetails';
 import OneCar from "./OneCar"
 import "../carCardsStyling.css"
-
+var myCars;
+// {"id":1,"marque":"bmw","puissence":12,"option":"full option","released_date":"2009-02-13T23:31:30.000+00:00","description":"a great car"},"photo2":null,"photo1":null,"photo3":null,"photo4":null}
 const CarModels =()=>{
     const [data, setData] = useState([]);
-    const test=[1,2,3,4,5,6]
+    const test=[1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,11,10,11]
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/cars/')
+        axios.get('http://localhost:8090/Cars/getAllCars')
           .then((res) => {
             setData(res.data);
+            // myCars=res.data;
           })
           .catch(err => console.log(err));
       },[])
@@ -21,6 +23,9 @@ const CarModels =()=>{
           <span className='text-normal text-yellow-400'>&#9679;</span> Discover Our Car Fleet
         </h2>
         <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+        </div>
+       
+      </div>
         <div className="theFilter">
   <div className="theTitle PP">
     <div className="Tit">Car Catalogue</div>
@@ -55,25 +60,29 @@ const CarModels =()=>{
     </select>
   </div>
 </div>
+<div className="leHole">
 
-{/* end of the filltre */}
-{/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> */}
-      
-        {test.map((car, i) => (
+        {data.map((car, i) => (
          /*    <DisplayModelsDetails
               car={car}
               key={i}
             /> */
-              <OneCar/>
-              
+            <>
+            
+              <OneCar data={car}/>
+              {/* {console.log(car)} */}
+            </>
         
             
           ))}
+</div>
+
+{/* end of the filltre */}
+{/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> */}
+      
 
 
-        </div>
-       
-      </div>
+        
     </>
     )
 }
