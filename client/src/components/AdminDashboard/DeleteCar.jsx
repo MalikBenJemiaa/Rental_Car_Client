@@ -6,7 +6,7 @@ const DeleteCar = () => {
   const [selectedProduct, setSelectedProduct] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/cars").then((response) => {
+    axios.get("http://localhost:8090/Cars/getAllCars").then((response) => {
       setCars(response.data);
     });
   }, []);

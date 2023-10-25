@@ -13,25 +13,25 @@ const Stats = () => {
         <div className="grid grid-cols-2 row-gap-8 md:grid-cols-4">
           <div className="text-center md:border-r border-r-slate-500" data-aos="zoom-in" data-aos-duration="500">
             <h6 className="text-4xl font-bold lg:text-5xl xl:text-6xl">674+</h6>
-            <p className="text-sm font-medium tracking-widest text-yellow-400 py-4 uppercase text-yellow-400 lg:text-base">
+            <p id="webSiteTextColor" className="text-sm font-medium tracking-widest  py-4 uppercase  lg:text-base">
               happy costomers 
             </p>
           </div>
           <div className="text-center md:border-r border-r-slate-500" data-aos="zoom-in" data-aos-duration="1000">
             <h6 className="text-4xl font-bold lg:text-5xl xl:text-6xl">140+</h6>
-            <p className="text-sm font-medium tracking-widest text-yellow-400 py-4 uppercase lg:text-base">
+            <p id="webSiteTextColor" className="text-sm font-medium tracking-widest  py-4 uppercase lg:text-base">
               Count of cars
             </p>
           </div>
           <div className="text-center md:border-r border-r-slate-500" data-aos="zoom-in"  data-aos-duration="1500">
             <h6 className="text-4xl font-bold lg:text-5xl xl:text-6xl">48</h6>
-            <p className="text-sm font-medium tracking-widest text-yellow-400 py-4 uppercase lg:text-base">
+            <p id="webSiteTextColor" className="text-sm font-medium tracking-widest  py-4 uppercase lg:text-base">
               Car center solutions
             </p>
           </div>
           <div className="text-center" data-aos="zoom-in"  data-aos-duration="2000">
             <h6 className="text-4xl font-bold lg:text-5xl xl:text-6xl">30.1k</h6>
-            <p className="text-sm font-medium tracking-widest text-yellow-400 py-4 uppercase lg:text-base">
+            <p id="webSiteTextColor" className="text-sm font-medium tracking-widest  py-4 uppercase lg:text-base">
               Total kilometers+
             </p>
           </div>

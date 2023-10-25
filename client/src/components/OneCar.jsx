@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { useState } from "react";
 import CarImage from "../assets/images/BMW.jpeg"
-
+import { Link } from 'react-router-dom';
 
 const OneCar =(props)=>{
 
@@ -218,11 +218,22 @@ const OneCar =(props)=>{
             <div className="theW">{props.data.tech_fiche.boite}</div>
           </div>
         </div>
-        <button className="">Booking Now</button>
+        
+        <Link  to={{
+    pathname: `/car/${props.data.mat}`,
+    state: { data: props.data } 
+  }}
+        >
+        <button id="BookingButton">Booking Now</button>
+      </Link>
+          
+          
+          
+         
         <div className="thespace"></div>
       </div>
  
- 
+ {/* {console.log(props.data)} */}
  </>
    )
 }

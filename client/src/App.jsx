@@ -55,7 +55,7 @@ const App = () => {
       <AuthContextProvider>
       <div>
       {isVisible && (
-        <button id="button" className="show" onClick={scrollToTop}>
+        <button id="button"  className="show" onClick={scrollToTop}>
         </button>
       )}
     </div>

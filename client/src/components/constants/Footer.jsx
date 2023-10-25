@@ -3,6 +3,7 @@ import * as images from '../../assets/'
 
 const Footer = () => {
   return (
+    
     <>
             <div className="bg-black py-12">
                 <div className="mx-auto container pt-8 lg:pt-12 flex flex-col items-center justify-center">

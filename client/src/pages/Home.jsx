@@ -16,7 +16,7 @@ function App() {
    <Faqs />
    <Banner />
    <Contact />
-  <CarModels/>
+  {/* <CarModels/> */}
 
    </>
   );

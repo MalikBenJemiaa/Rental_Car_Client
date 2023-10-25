@@ -7,7 +7,7 @@ var myCars;
 // {"id":1,"marque":"bmw","puissence":12,"option":"full option","released_date":"2009-02-13T23:31:30.000+00:00","description":"a great car"},"photo2":null,"photo1":null,"photo3":null,"photo4":null}
 const CarModels =()=>{
     const [data, setData] = useState([]);
-    const test=[1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10,11,10,11]
+
     useEffect(()=>{
         axios.get('http://localhost:8090/Cars/getAllCars')
           .then((res) => {
@@ -20,7 +20,7 @@ const CarModels =()=>{
       <>
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <h2 className="font-palanquin py-8 text-4xl uppercase font-bold text-gray-600 lg:max-w-lg">
-          <span className='text-normal text-yellow-400'>&#9679;</span> Discover Our Car Fleet
+          <span id="webSiteTextColor" className='text-normal '>&#9679;</span> Discover Our Car Fleet
         </h2>
         <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
         </div>

@@ -18,7 +18,7 @@ const Testimonials = () => {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
       <h2 className="font-palanquin py-8 text-4xl uppercase font-bold">
-        <span className='text-normal text-yellow-400'>&#9679; </span>
+        <span id="webSiteTextColor" className='text-normal'>&#9679; </span>
         Their Words, Our Excellence
         </h2>
         <div className="flex flex-wrap -m-4">

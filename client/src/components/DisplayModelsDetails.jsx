@@ -15,9 +15,9 @@ const DisplayModelsDetails = (props) => {
         data-aos-offset="300"
       >
         <img
-          src={props.car.carIMG}
+          src={props.data.photo1}
           className="object-contain w-full h-64"
-          alt={props.car.carName}
+          alt={props.data.model}
         />
         <div className="p-5">
           <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
@@ -27,7 +27,7 @@ const DisplayModelsDetails = (props) => {
               aria-label="Category"
               title="traveling"
             >
-              {props.car.carFuelType}
+              {props.data.energie}
             </a>
             <br />
             <span className="text-gray-600">{props.car.carLocation}</span>
@@ -38,10 +38,10 @@ const DisplayModelsDetails = (props) => {
             title="Visit the East"
             className="inline-block mb-3 text-2xl uppercase font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
           >
-            {props.car.carName}
+            {props.data.model}
           </a>
           <p className="mb-2 text-gray-700">
-            {props.car.carPrice} TND
+            {props.data.price_per_day} TND
             <span className="mx-3 text-sm text-slate-600 uppercase">
               Per Day
             </span>
@@ -86,10 +86,14 @@ const DisplayModelsDetails = (props) => {
             </span>
             <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-black">
               More Details
+              <br>
+              </br>
+              {props.data.tech_fiche.description}
             </span>
           </Link>
         </div>
       </div>
+      {console.log(props.data)}
     </>
   );
 };

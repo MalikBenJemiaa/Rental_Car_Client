@@ -22,7 +22,7 @@ const DisplayModels = () => {
     <>
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <h2 className="font-palanquin py-8 text-4xl uppercase font-bold text-gray-600 lg:max-w-lg">
-          <span className='text-normal text-yellow-400'>&#9679;</span> Discover Our Car Fleet
+          <span id="webSiteTextColor" className='text-normal '>&#9679;</span> Discover Our Car Fleet
         </h2>
         <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
           {data.map((car, i) => (

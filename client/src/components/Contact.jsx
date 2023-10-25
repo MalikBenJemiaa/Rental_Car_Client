@@ -26,21 +26,21 @@ const Contact = () => {
     <>
     <section className="text-gray-600 body-font relative">
     <h2 className="font-palanquin py-8 text-center text-4xl uppercase font-bold text-gray-600">
-        <span className='text-normal text-yellow-400'>&#9679;</span> Stay in Touch
+        <span id="webSiteTextColor" className='text-normal'>&#9679;</span> Stay in Touch
         </h2>
   <div className="container px-5 pb-20 mx-auto flex sm:flex-nowrap flex-wrap">
     <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative" data-aos="fade-right">
-      <iframe width="100%" height="100%" className="myMap absolute inset-0" frameBorder="0" title="map" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"></iframe>
+      <iframe width="100%" height="100%" className="myMap absolute inset-0" frameBorder="0" title="map" marginHeight="0" marginWidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Ben%20Arous%2C%20El%20Mourouj%2C%20Tunisia&ie=UTF8&t=&z=14&iwloc=B&output=embed"></iframe>
       <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
         <div className="lg:w-1/2 px-6">
           <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-          <p className="mt-1">El Kef, Tunisia | Seliana, Tunisia | Djerba, Tunisia</p>
+          <p className="mt-1">El Mourouj, Ben Arous | Tunisia | 2074</p>
         </div>
         <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
           <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-          <a href={`mailto:${email}`} className="text-indigo-500 leading-relaxed">contact@tunisianautotrek.tn</a>
+          <a href={`mailto:${email}`} className="text-indigo-500 leading-relaxed">Hssine.medaziz1@gmail.com</a>
           <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-          <p className="leading-relaxed">78-800-890</p>
+          <p className="leading-relaxed">28-315-166</p>
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@ const Contact = () => {
         <label  className="leading-7 text-sm text-gray-600">Message</label>
         <textarea name="message" className="w-full bg-white rounded border  h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
       </div>
-      <button type="submit" value="Send" className="w-full text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-yellow-400 rounded text-lg">Send Your Message</button>
+      <button id="SendYourMsgButton" type="submit" value="Send" className="w-full text-white bg-black border-0 py-2 px-6 focus:outline-none rounded text-lg">Send Your Message</button>
       </form>
     </div>
   </div>
