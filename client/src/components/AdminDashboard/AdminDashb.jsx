@@ -34,7 +34,7 @@ const AdminDashb = () => {
     axios
       .delete(`http://localhost:8090/Cars/deleteCars/${carId}`)
       .then(() => {
-        console.log("car is deleted successfully.");
+        console.log("car is deleted successfully");
         fetchCars();
         
       })
