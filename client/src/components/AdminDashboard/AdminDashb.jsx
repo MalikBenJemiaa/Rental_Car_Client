@@ -3,6 +3,9 @@ import axios from "axios";
 import "./AdminDashb.css";
 import UpdateCar from "./UpdateCar";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AdminDashb = () => {
   // window.scrollTo(0, 0);
@@ -45,10 +48,18 @@ const AdminDashb = () => {
     setSelectedCar(null);
     setIsUpdating(false);
   };
+  const showToastMessageDelete = () => {
+    toast.success('La voiture est supprimée !', {
+        position: toast.POSITION.TOP_RIGHT
+    });
+};
+
+
 
   return (
     <>
       <body>
+      <ToastContainer />
         <div className="dashboardX">
           <div className="dashboardX-body">
             <div className="dashboardX-body-main-content">
@@ -107,7 +118,11 @@ const AdminDashb = () => {
                       </div>
                       <div
                         className="dashboard-actions red cursor-pointer"
-                        onClick={() => handleDelete(car.mat)}
+                        onClick={() =>{
+                          handleDelete(car.mat);
+                          showToastMessageDelete();
+                        }
+                        }
                       >
                         Delete
                       </div>
