@@ -12,7 +12,7 @@ const MoreDetails = (props) => {
   const [carDetails, setCarDetails] = useState({});
   useEffect(() => {
     console.log("Id selected is ",id)
-      axios.get(`http://localhost:8090/Cars/getCarsById/${id}`)
+      axios.get(`http://localhost:8090/getCarsById/${id}`)
       .then((res) => {
         setCarDetails(res.data);
         console.log("fetched succesfully: ",res.data)

@@ -9,7 +9,7 @@ const CarModels =()=>{
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:8090/Cars/getAllCars')
+        axios.get('http://localhost:8090/getAllCars')
           .then((res) => {
             setData(res.data);
             // myCars=res.data;

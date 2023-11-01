@@ -5,6 +5,8 @@ import AuthAlert from '../components/constants/AuthAlert';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../utils/firebase';
+import axios from 'axios';
+
 
 const Signin = () => {
   const { googleSignIn, user } = UserAuth();
@@ -12,16 +14,42 @@ const Signin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const [err, setErr] = useState(null);
   const [showpass, setShowPass] = useState(false)
 
 
   const handleEmailSignIn = async () => {
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-    } catch (error) {
-      setError('Invalid email or password.');
-      console.log(error);
-    }
+    // try {
+    //   await signInWithEmailAndPassword(auth, email, password);
+    // } catch (error) {
+    //   setError('Invalid email or password.');
+    //   console.log(error);
+    // }
+    
+
+        axios.post("http://localhost:8090/Athentication/authenticate",{"username":email,"password":password}).then((res)=>{
+            console.log(res)
+            
+            if (res.data.token!=null){
+                // set the token 
+            // set the role
+            // set the username
+            // redirect to the home page
+            console.log("logIned")
+            
+        }else{
+            // print tost
+            console.log("do not logIned")
+            // <AuthAlert message={error} />
+            setErr("You Are not logged in.")
+        }
+    }).catch((e)=>{
+        console.log("do not logIned")
+        // <AuthAlert message={error} />
+        setErr("You Are not logged in.")
+        
+    })
+
   };
 
   useEffect(() => {
@@ -33,14 +61,15 @@ const Signin = () => {
       if (user.emailVerified) {
         redirectToHome();
       } else {
-        setError('Please verify your email before signing in.');
+        setError('You Are not logged in.');
       }
     }
   }, [user, navigate]);
 
   return (
     <>
-     {error && <AuthAlert message={error} />} 
+     {err && <AuthAlert message={err} />} 
+
 
       <div className="bg-white">
                 <div className="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 2xl:mx-auto 2xl:container md:flex items-center justify-center h-full">
@@ -86,13 +115,13 @@ const Signin = () => {
                         <div>
                             <label htmlhtmlFor="email" className="text-sm font-medium leading-none text-gray-800">
                                 {" "}
-                                Email{" "}
+                                Username{" "}
                             </label>
                             <input type='email'
              value={email}
              onChange={(e) => setEmail(e.target.value)}
              aria-labelledby="email"
-               className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-500 text-gray-800 py-3 w-full pl-3 mt-2" placeholder="e.g: example@email.com" />
+               className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-500 text-gray-800 py-3 w-full pl-3 mt-2" placeholder="Enter you username" />
                         </div>
                         <div className="mt-6 w-full">
                             <label htmlhtmlFor="myInput" className="text-sm font-medium leading-none text-gray-800">

@@ -260,3 +260,119 @@ border-color:#56957e ;
 #SendYourMsgButton:hover{
   background-color: #56957e;
 }
+/* the styling of find by model */
+body{
+  margin: 0px 0px 0px;
+}
+.theHeroo{
+  width: 90%;
+  /* border: 1px solid black; */
+  margin: auto;
+  display: flex;    
+  flex-direction: column;
+  position: relative;
+}
+.PP{
+  position: absolute;
+  width: 258px;
+  height: 15px;
+  top: 19px;
+  background-color: rgba(155, 197, 255, 0.347);
+  z-index: 3;
+}
+/* .P11{
+  position: absolute;
+  z-index: 3;
+  top: 50px;
+  font-size: 100px;
+} */
+.theHeroo .Title{
+  z-index: 10;
+  font-size: 30px;
+  width: 100%;
+  font-weight: bold;
+  /* padding: -20px -20px; */
+  border-bottom: 5px solid rgba(155, 197, 255, 0.347);
+  /* border: 1px solid black;     */
+  font-family: sans-serif;
+}
+.theHeroo .TheCars{
+  display: flex;
+  z-index: 10;
+
+  z-index: 10;
+
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.theHeroo .TheCars .oneCar{
+  z-index: 10;
+
+  box-shadow: 1px 1px 20px 0.5px rgb(245, 245, 245);
+  box-shadow: 1px 1px 20px 0.5px rgba(155, 197, 255, 0.347);
+  margin-left: 20px;
+  border: 1px solid rgba(156, 157, 224, 0.25);
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:  200px;
+  height: 200px;
+}
+.theHeroo .TheCars .oneCar .Theimg{
+  width: 85%;
+  z-index: 10;
+
+  height: 100px;
+  position: relative;
+overflow: hidden; /* Hide any overflow of the image */
+}
+.theHeroo .TheCars .oneCar .Theimg img{
+  position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 10;
+
+object-fit: cover; /* Scale the image to cover the entire container */
+z-index: -1; 
+}
+.theHeroo .TheCars .oneCar .type{
+  margin-top: 10px;
+  font-size: 25px;
+  width: 100%;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  z-index: 10;
+
+  color: rgb(61, 61, 61);
+}
+.theHeroo .TheCars .oneCar button:hover{
+  background-color: rgba(121, 155, 204, 0.347);
+
+}
+.theHeroo .TheCars .oneCar button{
+  background-color: transparent;
+  border: 0px solid rgba(156, 157, 224, 0.25);
+  border-radius: 3px;
+  margin-top: 15px;
+  padding: 5px 7px;
+  text-decoration: none;
+  font-size: 15px;
+  z-index: 10;
+
+  width: 50%;
+  color: rgb(91, 91, 91);
+  background-color: rgba(155, 197, 255, 0.347);
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgb(0, 136, 255);
+  /* box-shadow: 1px 1px 20px 0.5px rgb(210, 216, 243); */
+  /* box-shadow: 1px 1px 20px 0.5px rgb(180, 180, 180); */
+  
+  text-align: center;
+}

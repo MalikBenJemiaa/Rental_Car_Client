@@ -2,6 +2,7 @@ import React from 'react'
 import * as images from '../../assets/'
 
 const Footer = () => {
+    const whiteTextStyle = { color: 'white' };
   return (
     
     <>
@@ -21,13 +22,18 @@ const Footer = () => {
                                 <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Pricing</li>
                                 <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">FAQs</li>
                                 <li className=" md:mr-6 cursor-pointer pt-4 lg:py-0">Help</li>
-                                <li className="cursor-pointer pt-4 lg:py-0">Privacy Policy</li>
+                                <li className="md:mr-6 cursor-pointer pt-4 lg:py-0">Privacy Policy</li>
+                                <li className="md:mr-6 cursor-pointer pt-4 lg:py-0">Admin space</li>
                             </ul>
                         </div>
                         <div className="text-sm text-color capitalize mb-10 f-f-l">
                             <p> © 2023 TunisianAutoTrek Inc. All rights reserved</p>
                         </div>
                     </div>
+                    <ul className="md:flex items-center">
+                        
+                                <li className="md:mr-6 cursor-pointer pt-4 lg:py-0" style={whiteTextStyle}>Soon</li>
+                    </ul>
                     <div className="flex justify-between items-center pt-5">
                         <div className="mr-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width={135} height={40} viewBox="0 0 135 40" fill="none">
