@@ -15,6 +15,7 @@ const OneCar =(props)=>{
   useEffect(()=>{
     
     
+    
     const intervalId = setInterval(changeImage, 5000);
     return () => clearInterval(intervalId);
   },[])

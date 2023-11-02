@@ -260,3 +260,12 @@ border-color:#56957e ;
 #SendYourMsgButton:hover{
   background-color: #56957e;
 }
+.textMainColor{
+  color: #56957e;
+}
+.inputForm{
+  border-color: #1a1919;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}

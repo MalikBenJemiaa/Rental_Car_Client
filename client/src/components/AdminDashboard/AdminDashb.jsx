@@ -25,11 +25,14 @@ const AdminDashb = () => {
 
   useEffect(() => {
     fetchCars();
+    window.scrollTo(0, 0);
   }, []);
 
   const handleEdit = (car) => {
     setSelectedCar(car);
+    console.log("car to edit \n",car)
     setIsUpdating(true);
+    window.scrollTo(0, 0);
   };
 
   const handleDelete = (carId) => {
@@ -47,11 +50,18 @@ const AdminDashb = () => {
   const handleCancelEdit = () => {
     setSelectedCar(null);
     setIsUpdating(false);
+    console.log("edit is cancelled")
+    
   };
   const showToastMessageDelete = () => {
     toast.success('La voiture est supprimée !', {
         position: toast.POSITION.TOP_RIGHT
     });
+};
+const showToastMessageUpdate = () => {
+  toast.success('La voiture est modifiée !', {
+      position: toast.POSITION.TOP_RIGHT
+  });
 };
 
 
@@ -71,7 +81,8 @@ const AdminDashb = () => {
               {isUpdating && (
                 <UpdateCar
                   car={selectedCar}
-                  onCancel={handleCancelEdit}
+                  methodCancel={handleCancelEdit}
+                  MessageUpdated={showToastMessageUpdate}
                   onUpdated={() => {
                     setIsUpdating(false);
                     fetchCars();
@@ -112,7 +123,8 @@ const AdminDashb = () => {
                       <div className="dashboard-number">{car.price_per_day} TND</div>
                       <div
                         className="dashboard-actions green cursor-pointer"
-                        onClick={() => handleEdit(car)}
+                        onClick={() => {handleEdit(car);}
+                      }
                       >
                         Edit
                       </div>
