@@ -260,6 +260,7 @@ border-color:#56957e ;
 #SendYourMsgButton:hover{
   background-color: #56957e;
 }
+
 /* the styling of find by model */
 body{
   margin: 0px 0px 0px;
@@ -376,3 +377,14 @@ z-index: -1;
   
   text-align: center;
 }
+
+.textMainColor{
+  color: #56957e;
+}
+.inputForm{
+  border-color: #1a1919;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
