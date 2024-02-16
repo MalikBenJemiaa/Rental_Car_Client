@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { CloudinaryContext, Image, Transformation } from 'cloudinary-react';
 import {Cloudinary} from "@cloudinary/url-gen";
+import $ from 'jquery';
 
 const AddCar = () => {
   const cloudName = 'ddlpxakhl'; 
@@ -125,17 +126,78 @@ console.log("bytearray",byteArray)
     } */
 
 
+
+
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    console.log("lsmsml")
+    console.log('http://localhost:8090/saveNewCar')
+    console.log(localStorage.getItem('Authorization'))
+    
+    // e.preventDefault();
     try {
       console.log(formData,"is the object to send")
-      const response =await axios.post('http://localhost:8090/QueryCars/saveNewCar', formData);
+      // const response =await axios.get('http://localhost:8090/secure/admin/saveNewCar', formData,{
+      //   headers: {
+          // 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbWluIiwiaWF0IjoxNzAwMzMyNjQzLCJleHAiOjE3MDE0MjY2NDh9.pl4JUjKEquYjELXOEdg_cz822q5364hWfLAq0FEC4hM'
+      //   },
+      //   withCredentials: true,});
+      const response =await axios.post('http://localhost:8090/secure/admin/saveNewCar', formData,
+      {
+        headers: {
+          'authorization': localStorage.getItem('Authorization')
+        },
+        withCredentials: true,
+      }
+      
+      );
       /* window.location.reload(); */
       console.log("response: ",response)    } 
       catch (error) {
       console.error(error);
     }
   };
+
+
+
+
+//   const handleSubmit = async (e) => {
+//     console.log("lsmsml");
+
+//     const headers = {
+//         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbWluIiwiaWF0IjoxNzAwMzMyNjQzLCJleHAiOjE3MDE0MjY2NDh9.pl4JUjKEquYjELXOEdg_cz822q5364hWfLAq0FEC4hM',
+//     };
+
+//     try {
+//         console.log(formData, "is the object to send");
+
+//         const response = await $.ajax({
+//             url: 'http://localhost:8090/secure/admin/saveNewCar',
+//             type: 'POST',  // Change this to 'POST' if needed
+//             data: formData,
+//             headers: headers,
+//             xhrFields: {
+//                 withCredentials: true,
+//             },
+//         });
+
+//         console.log("response: ", response);
+//     } catch (error) {
+//         console.error(error);
+//     }
+// };
+
+
+
+
+
+
+
+
+
+
+
+
 
   return (
     <div className="max-w-2xl mx-auto py-6">
@@ -148,7 +210,7 @@ console.log("bytearray",byteArray)
           }}
         />
       )}
-	<form onSubmit={handleSubmit}>
+	<form >
 		<div className="relative z-0 mb-6 w-full group">
 			<input
              type="text"
@@ -191,7 +253,7 @@ console.log("bytearray",byteArray)
             onChange={(e) =>
               setFormData({ ...formData, price_per_day: e.target.value })
             }
-           className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
+           className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer"  />
 			<label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Price per day</label>
 		</div>
 		<div className="grid xl:grid-cols-2 xl:gap-6">
@@ -200,7 +262,7 @@ console.log("bytearray",byteArray)
                  type="file"
                  onChange={(e) => handleImageChange(e, 0)}
              
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer"  />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 1
 </label>
 		</div>
@@ -212,7 +274,7 @@ console.log("bytearray",byteArray)
                  type="file"
                  onChange={(e) => {handleImageChange(e, 1) }}
              
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer"  />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 2
 </label>
 </div>
@@ -225,7 +287,7 @@ console.log("bytearray",byteArray)
                  type="file"
                  onChange={(e) => handleImageChange(e, 2)}
              
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer"  />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 3
 </label>
 		</div>
@@ -237,7 +299,7 @@ console.log("bytearray",byteArray)
                  type="file"
                  onChange={(e) => handleImageChange(e, 3)}
              
-                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer" required />
+                className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 peer"  />
 				<label  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Image 4
 </label>
 
@@ -383,7 +445,8 @@ console.log("bytearray",byteArray)
     
     <div className="p-2 w-full flex">
             <button
-              type="submit"
+              // type="submit"
+              onClick={handleSubmit}
               className="flex mr-2 text-white bg-[#0f172a] border-0 py-2 px-8 focus:outline-none hover:bg-[#facc15] hover:text-black rounded text-lg uppercase font-bold"
             >
               Add Car
